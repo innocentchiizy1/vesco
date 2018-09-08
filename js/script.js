@@ -22,6 +22,17 @@ $(function () {
         smartSpeed: 700,
         loop: true,
         autoplayHoverPause: true,
+        responsive: {
+            0 : {
+                items:1
+            },
+            480 : {
+                items:2
+            },
+            768: {
+                items:3
+            }
+        }
     });
 });
 /*=============TESTIMONIALS============*/
@@ -49,6 +60,20 @@ $(function () {
         smartSpeed: 700,
         loop: true,
         autoplayHoverPause: true,
+        responsive: {
+            0 : {
+                items:1
+            },
+            480 : {
+                items:3
+            },
+            768: {
+                items:5
+            },
+            992 : {
+                items:6
+            }
+        }
     });
 });
 /*=============NAVIGATION============*/
@@ -56,11 +81,14 @@ $(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() < 50) {
             $("nav").removeClass("vesco-top-nav");
+            $("#back-to-top").fadeOut();
         } else {
             $("nav").addClass("vesco-top-nav");
+            $("#back-to-top").fadeIn();   
         }
     });
 });
+
 /*=============SMOOTH SCROLLING============*/
 $(function () {
     $("a.smooth-scroll").click(function (event) {
@@ -70,4 +98,12 @@ $(function () {
             scrollTop: $(section).offset().top - 64
         }, 1250, "easeInOutExpo");
     });
+});
+
+/*=============CLOSE MOBILE MENU ON CLICK============*/
+$(function(){
+$(".navbar-collapse ul li a").on("click touch",function(){
+    $(".navbar-toggle").click();
+});
+
 });

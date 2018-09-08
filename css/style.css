@@ -81,7 +81,7 @@ h3 {
 .btn-white:hover,
 .btn-white:focus {
     background-color: #fff;
-    color: 41464b;
+    color: #41464b;
 }
 
 .btn-blue {
@@ -93,6 +93,16 @@ h3 {
 .btn-blue:focus {
     background-color: #34c6d3;
     color: #fff;
+}
+
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    padding: 3px 15px;
+    border-radius: 0;
+    display: none;
 }
 
 /*==============ANIMATION===================== */
@@ -320,7 +330,7 @@ h4.team-member-designation {
     height: 30px;
     position: absolute;
     top: 0;
-    left: 100;
+    left:100px;
 }
 
 .testimonials blockquote ::after {
@@ -332,7 +342,7 @@ h4.team-member-designation {
     height: 30px;
     position: absolute;
     bottom: 0;
-    right: 100;
+    right:100px;
 }
 
 .testimonial-author p {
@@ -462,6 +472,10 @@ footer {
 
 address {
     color: #fff;
+}
+
+address strong {
+    font-size: 16px;
 }
 
 address strong,
